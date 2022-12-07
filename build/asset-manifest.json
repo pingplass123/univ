@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dd53593c.css",
+    "main.js": "/static/js/main.3e9e0daf.js",
+    "static/js/787.241534ed.chunk.js": "/static/js/787.241534ed.chunk.js",
+    "static/media/univbanner3.webp": "/static/media/univbanner3.5150640b431556c0cd8b.webp",
+    "static/media/univbanner4.webp": "/static/media/univbanner4.2c6cdcd5c1021ff1abf6.webp",
+    "static/media/univbanner2.webp": "/static/media/univbanner2.0af5105bb94a9c03e616.webp",
+    "static/media/aboutus2.webp": "/static/media/aboutus2.06c022ef25e35d23f9cd.webp",
+    "static/media/logo.png": "/static/media/logo.01160d1970a9079b4360.png",
+    "index.html": "/index.html",
+    "main.dd53593c.css.map": "/static/css/main.dd53593c.css.map",
+    "main.3e9e0daf.js.map": "/static/js/main.3e9e0daf.js.map",
+    "787.241534ed.chunk.js.map": "/static/js/787.241534ed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd53593c.css",
+    "static/js/main.3e9e0daf.js"
+  ]
+}
