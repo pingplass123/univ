@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Martel+Sans:wght@900&display=swap');
+
+.carousel-caption {
+    top: 20%;
+    bottom: auto;
+    /* font-family: Poppins, sans-serif; */
+    /* font-family: 'Martel Sans', sans-serif; */
+    font-family: 'Caveat', cursive;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    .carousel-caption h2 {
+        font-size:3rem;
+        top:70%;
+        bottom: auto;
+    
+    }
+    .carousel-caption p {
+        font-size:1.5rem;
+        top:50%;
+        bottom: auto;
+    
+    }
+  }

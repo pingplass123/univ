@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
+/* Basic editor styles */
+.create-blog{
+  font-family: Poppins, sans-serif;
+  max-width: 700px;
+  margin: 5rem auto;
+
+}
+.text-editor{
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.menu-bar{
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-bar button{
+  font-size: 18px;
+  margin: 7px;
+  margin-right: 15px;
+  outline: none;
+  border: none;
+  background: none;
+  color:rgb(70,70,70);
+  cursor: pointer;
+}
+button.is-active{
+  background: rgb(197,197,197);
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+/* hi-color */
+.hi-yellow{
+  background: #fff3cd;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+.hi-orange{
+  background: #ffc078;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+.hi-green{
+  background: #9ce99a;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+.hi-blue{
+  background: #74c0fc;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+.hi-purple{
+  background: #b197fc;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+.hi-red{
+  background: red;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+.hi-pink{
+  background: #ffa8a8;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+.ProseMirror {
+  padding: 10px;
+  border-top: 1px solid grey;
+  background: white;
+  border-radius: 0 0 5px 5px;
+  min-height: 100px;
+}
+.ProseMirror> * + * {
+    margin-top: 0.75em;
+  }
+
+  .ProseMirror ul,
+  .ProseMirror ol {
+    padding: 0 1rem;
+  }
+
+  .ProseMirror h1,
+  .ProseMirror h2,
+  .ProseMirror h3,
+  .ProseMirror h4,
+  .ProseMirror h5,
+  .ProseMirror h6 {
+    line-height: 1.1;
+  }
+
+  .ProseMirror code {
+    background-color: #cfcfcf;
+    color: #616161;
+  }
+
+  .ProseMirror pre {
+    background: #0D0D0D;
+    color: #ffff;
+    font-family: 'JetBrainsMono', monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+    .ProseMirror pre code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+
+
+  .ProseMirror img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ProseMirror blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid #202020;
+  }
+
+  .ProseMirror hr {
+    border: none;
+    border-top: 2px solid #202020;
+    margin: 2rem 0;
+  }
+  .ProseMirror img {
+    height: auto;
+    width: 100%;
+    position: relative;
+    
+  }
+
+  .ProseMirror iframe{    
+    position: relative;
+    max-width: 300px;
+    height: fit-content;
+  }
+
+  /* @media screen {
+    
+  } */
+
+
+  .ProseMirror pre {
+    background: #0d0d0d;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+  }
+
+    .ProseMirror code {
+      background: none;
+      color: inherit;
+      font-size: 0.8rem;
+      padding: 0;
+    }
+
+    .ProseMirror .hljs-comment,
+    .ProseMirror .hljs-quote {
+      color: #616161;
+    }
+
+    .ProseMirror .hljs-variable,
+    .ProseMirror .hljs-template-variable,
+    .ProseMirror .hljs-attribute,
+    .ProseMirror .hljs-tag,
+    .ProseMirror .hljs-name,
+    .ProseMirror .hljs-regexp,
+    .ProseMirror .hljs-link,
+    .ProseMirror .hljs-name,
+    .ProseMirror .hljs-selector-id,
+    .ProseMirror .hljs-selector-class {
+      color: #f98181;
+    }
+
+    .ProseMirror .hljs-number,
+    .ProseMirror .hljs-meta,
+    .ProseMirror .hljs-built_in,
+    .ProseMirror .hljs-builtin-name,
+    .ProseMirror .hljs-literal,
+    .ProseMirror .hljs-type,
+    .ProseMirror .hljs-params {
+      color: #fbbc88;
+    }
+
+    .ProseMirror .hljs-string,
+    .ProseMirror .hljs-symbol,
+    .ProseMirror .hljs-bullet {
+      color: #b9f18d;
+    }
+
+    .ProseMirror .hljs-title,
+    .ProseMirror .hljs-section {
+      color: #faf594;
+    }
+
+    .ProseMirror .hljs-keyword,
+    .ProseMirror .hljs-selector-tag {
+      color: #70cff8;
+    }
+
+    .ProseMirror .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .ProseMirror .hljs-strong {
+      font-weight: 700;
+    }

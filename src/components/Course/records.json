@@ -1,0 +1,32 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 8,
+            "title": "Photoshop fundamental course",
+            "body": "Welcome to Photoshop fundamental course",
+            "sub_id": 1,
+            "image": "https://wallpapercave.com/wp/wp4459721.jpg",
+            "hastag": "['Photoshop]",
+            "userID": 1,
+            "nameCreate": "beamtest",
+            "videoList": [
+                {
+                    "videoid" : "1",
+                    "videoname" : "video 1",
+                    "videolink" : "https://youtu.be/LhOGaRAXTzY",
+                    "videodescription": "video description 1"
+                },
+                {
+                    "videoid" : "2",
+                    "videoname" : "video 2",
+                    "videolink" : "https://www.youtube.com/watch?v=4bKT7MrtRCk",
+                    "videodescription": "video description 2"
+                }
+            ],
+            "created_at": "11/11/2022",
+            "updated_at": "11/11/2022"
+        }
+    ],
+    "message": "course retrieved successfully."
+}

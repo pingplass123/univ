@@ -1,0 +1,14 @@
+.nav-color{
+    background-color: #202020;
+}
+/* .offcanvasNavbarDropdown-expand{
+    color: white;
+} */
+
+.dropdowntitle{
+    color: white;
+}
+
+.nav-item.dropdown a {
+    color: white !important;
+}
