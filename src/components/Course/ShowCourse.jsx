@@ -17,6 +17,8 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import parser from "html-react-parser";
 import {useNavigate} from 'react-router-dom';
 import { slice } from 'lodash'
+import Badge from 'react-bootstrap/Badge';
+
 
 const ShowCourse = () => {
   const [course,setCourse] = useState([]);
@@ -237,7 +239,7 @@ function introStart(){
 
 // {console.log(user_id)}
 // {console.log(course)}
-console.log(video)
+// console.log(video)
 
 if(user_id!=course.userID){
   return (
@@ -246,20 +248,20 @@ if(user_id!=course.userID){
         <NavbarScrollAnotherPage/>
       </div><hr/><hr/><br/>
       
-      <div className="p-4 mb-4 text-bg-dark rounded-3" style={{ backgroundImage:`url(${course.image})` }}>
+      <div className="p-4 mb-4 rounded-3" style={{ backgroundImage:`url(${course.image})` }}>
         <div className="py-4 container-fluid">
-          <h1 className="display-5 fw-bold text-uppercase">{course.title}</h1>
+          <h1 className="text-primary display-5 fw-bold text-uppercase">{course.title}</h1>
           <div className="col-md-8 fs-4" style={{display:'flex'}}>
-            <div className='align-self-center'><BsPersonCircle/></div>
-            <div className='text-white'>&nbsp;{course.nameCreate}</div>
+            <div className='text-primary align-self-center'><BsPersonCircle/></div>
+            <div className='text-primary'>&nbsp;{course.nameCreate}</div>
           </div>
           <div className="pt-3 col-md-8 fs-6" style={{display:'flex'}}>
-            <div className='align-self-center'><BsCalendarCheck/></div>
-            <div className='text-white'>&nbsp;launch date {course.created_at}</div>
+            <div className='text-primary align-self-center'><BsCalendarCheck/></div>
+            <div className='text-primary'>&nbsp;launch date {course.created_at}</div>
           </div>
           <br/>
           {/* {...setTimeout(()=>introStart(),1000)}*/}
-          <Button id="introstart" className="border-white btn btn-lg" variant="outline-light" type="button" onClick={()=>introStart() }>Start watching</Button >
+          <Button id="introstart" className="border-primary btn btn-lg" variant="outline-primary" type="button" onClick={()=>introStart() }>Start watching</Button >
         </div>
       </div>
       
@@ -427,20 +429,20 @@ if(user_id==course.userID){
         <NavbarScrollAnotherPage/>
       </div><hr/><hr/><br/>
       
-      <div className="p-4 mb-4 text-bg-dark rounded-3" style={{ backgroundImage:`url(${course.image})` }}>
+      <div className="p-4 mb-4 text-primary rounded-3" style={{ backgroundImage:`url(${course.image})` }}>
         <div className="py-4 container-fluid">
           <h1 className="display-5 fw-bold text-uppercase">{course.title}</h1>
           <div className="col-md-8 fs-4" style={{display:'flex'}}>
-            <div className='align-self-center'><BsPersonCircle/></div>
-            <div className='text-white'>&nbsp;{course.nameCreate}</div>
+            <div className='text-primary align-self-center'><BsPersonCircle/></div>
+            <div className=''>&nbsp;{course.nameCreate}</div>
           </div>
           <div className="pt-3 col-md-8 fs-6" style={{display:'flex'}}>
-            <div className='align-self-center'><BsCalendarCheck/></div>
-            <div className='text-white '>&nbsp;launch date {course.created_at}</div>
+            <div className='text-primary align-self-center'><BsCalendarCheck/></div>
+            <div className=''>&nbsp;launch date {course.created_at}</div>
           </div>
           <br/>
           <div className='button-course'style={{display:'flex'}}>
-          <Button id="introstart" className="border-white btn btn-lg" variant="outline-light" type="button" onClick={()=>introStart()}>Start watching</Button >
+          <Button id="introstart" className="border-primary btn btn-lg" variant="outline-primary" type="button" onClick={()=>introStart()}>Start watching</Button >
             &nbsp;&nbsp;<Button variant='danger' onClick={() => deleteCourse(course.id)}>Delete course</Button>
           </div>
           
@@ -603,5 +605,7 @@ if(user_id==course.userID){
 
 }
 }
+
+
 
 export default ShowCourse;
