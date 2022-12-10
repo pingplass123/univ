@@ -135,6 +135,7 @@ function NavbarScroll() {
                       title={userLogin}
                       id="input-group-dropdown-1"
                     >
+                      <Dropdown.Item href="/profile" to='/profile'>Profile</Dropdown.Item>
                       <Dropdown.Item href="#" to='/' onClick={logout}>Logout</Dropdown.Item>
                     </DropdownButton>
                     <Nav.Link className="text-white" href="#action2" onClick={create}>

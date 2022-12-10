@@ -7,6 +7,7 @@ import TimelineBlog from './components/Timeline/TimelineHead';
 import TabCreate from './components/Blog/TabCreate';
 import ShowBlog from './components/Blog/ShowBlog';
 import ShowCourse from './components/Course/ShowCourse';
+import Profile from './components/Profile/Profile';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="/Timeline/:sub_name/Course/:id" element={<ShowCourse/>}/>
       <Route exact path="/Timeline/:sub_name/Course" element={<TimelineBlog/>} />
       <Route exact path="/Timeline/:sub_name/Post" element={<TimelineBlog/>} />
+      <Route exact path="/profile" element={<Profile />} />
       
     </Routes>
   </Router>
