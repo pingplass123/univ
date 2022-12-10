@@ -4,6 +4,7 @@ import LetteredAvatar from 'react-lettered-avatar';
 import NavbarScroll from '../Navbar/NavbarScroll';
 import CardComponent from './CardComponent';
 import { Link, useParams } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
 
 const Profile = () => {
 
@@ -72,6 +73,34 @@ const Profile = () => {
             <Title>{userName}</Title>
             <br />
             <SubTitle>Your Blog</SubTitle>
+            {!post ? (
+                <div class="col-md-8 offset-md-5">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-secondary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-info" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-dark" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            ) : ( <></>) }
             <ContainnerCard>
             {post && post.map((item,idx) => 
                 <CardComponent 
@@ -88,6 +117,34 @@ const Profile = () => {
             </ContainnerCard>
             <br />
             <SubTitle>Your course</SubTitle>
+            {!course ? (
+                <div class="col-md-8 offset-md-5">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                </div>
+            ) : (<></>) }
             <ContainnerCard>
             {course && course.map((item,idx) => 
                 <CardComponent 
@@ -111,8 +168,10 @@ export default Profile
 
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: black;
+    padding: 0px 30px 0px 30px;
+    overflow: hidden;
 `
 const ContainnerAvatar = styled.div`
     display: flex;
@@ -122,14 +181,12 @@ const ContainnerAvatar = styled.div`
 `
 
 const ContainnerCard = styled.div`
-    display: flex;
-    gap: 20px;
-    background: transparent;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    padding-left: 15px;
-    padding-right: 15px;
+  overflow: hidden;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 `
 
 const Title = styled.h1`

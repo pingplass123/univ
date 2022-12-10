@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link, useParams } from 'react-router-dom';
+import ReactReadMoreReadLess from "react-read-more-read-less";
 
 
 const Container = styled.div`
@@ -9,6 +10,12 @@ const Container = styled.div`
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.07);
   display: flex;
   align-items: center;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
   overflow: hidden;
 `;
 
@@ -22,8 +29,7 @@ const Photo = styled.div`
 `;
 
 const Content = styled.div`
-  border-radius: 8px;
-  color: white;
+
   background-color: white;
   padding: 20px;
   width: 70%;
@@ -34,11 +40,9 @@ const Content = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
   color: ${props => props.color};
-  margin-bottom: 15px;
-  display: block;
 `;
 
 const Text = styled.p`
@@ -53,7 +57,6 @@ const Tag = styled.p`
 
 const PreTitle = styled.span`
   color: ${props => props.color};
-  margin-bottom: 15px;
   display: block;
 `;
 
@@ -84,14 +87,13 @@ const CardComponent = ({
   id,
   category,
   idItem,
-
 }) => (
   <Container>
     <Photo bgPhoto={bgPhoto} bgColor={bgColor} />
     <Content>
       {preTitle && <PreTitle color={preTilteColor}>{preTitle}</PreTitle>}
       {title && <Title color={titleColor}>{title}</Title>}
-      {text && <Text>{text}</Text>}
+      {text && <ReactReadMoreReadLess charLimit={70}readMoreText={""}>{text.replace(/(<([^>]+)>)/ig, '')}</ReactReadMoreReadLess>}
       {tag && <Tag>{tag}</Tag>}
       {cta && (
         <CTA color={ctaColor}>

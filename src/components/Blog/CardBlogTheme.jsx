@@ -31,7 +31,7 @@ const CardBlogTheme = ({id,title,body,sub_id,user_id,nameCreate,image,hastag,cre
                 </p>
                     <div className="sub-link">
                         <Link to={{ pathname:`/Timeline/${sub_name}/Post/${id}`}} onClick={() => localStorage.setItem('post_id', id)}>
-                            Continue reading
+                            <button type="button" class="btn btn-dark btn-sm" >Read More</button>
                         </Link>
                     </div>
                 </div>
