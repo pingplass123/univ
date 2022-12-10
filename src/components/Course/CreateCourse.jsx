@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 // import "../Course/CourseComponents/";
 import Select from "react-select";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import Form from "react-bootstrap/Form";
-
+import { useNavigate } from "react-router-dom";
 // import styled from "styled-components";
 
 const CreateCourse = () => {
+  const navigate = useNavigate();
   //mediaform
   const [videoList, setVideoList] = useState([]);
-  console.log("videoList", videoList);
 
   //get name
   const getName = localStorage.getItem("user");
@@ -32,16 +32,14 @@ const CreateCourse = () => {
       .then((res) => res.json())
       .then((json) => {
         const data = [];
-        // console.log('before',data);
         json.data.forEach((element) => {
           data.push({
             label: element.sub_name,
             value: element.id,
           });
         });
-        // console.log('after',data);
+
         setOptions(data);
-        // console.log("clear data", data);
 
         setTimeout(() => {}, 3000);
       });
@@ -57,9 +55,7 @@ const CreateCourse = () => {
         Authorization: "Bearer " + token,
       },
       body: JSON.stringify(credentials),
-    })
-      .then((data) => data.json())
-      .then(console.log(credentials));
+    }).then((data) => data.json());
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,16 +70,19 @@ const CreateCourse = () => {
       });
       // RESPONSE SUBMIT
       if (response.success) {
-        swal("Success", response.message, "successfully.", {
-          buttons: false,
+        const { value: accept } = await Swal.fire({
           icon: "success",
-          timer: 2000,
+          title: "Success",
+          text: "Create course successfully.",
         });
+
+        if (accept) {
+          localStorage.setItem("course_id", response.data.id);
+          navigate(`/Timeline/${selected.label}/Course/${response.data.id}`);
+        }
       } else {
-        swal("Failed", response.message, "error");
+        Swal("Failed....", "Please provide complete information", "error");
       }
-    } else {
-      swal("Failed", "Please Full infomations", "error");
     }
   };
 
@@ -106,12 +105,16 @@ const CreateCourse = () => {
     setImage(base64);
     localStorage.setItem("cover_image", base64);
   };
+
   //handle state show for preview
   const handleOnClick = () => {
-    // if (videoList.length > 0) {
-    setIsShow(true);
-    // }
+    if (image.length !== 0) {
+      setIsShow(true);
+    } else {
+    }
   };
+
+  //remove image
   const removeImage = () => {
     setImage();
   };
@@ -239,24 +242,8 @@ const CreateCourse = () => {
                 {/* ----------Imgage Course---------- */}
                 <div className="mt-4">
                   <Form.Label style={{ color: "#37a6fb" }}>
-                    Select your cover course!
+                    Select your image course!
                   </Form.Label>
-
-                  {/* <div className="mt-1 flex items-center">
-                    <input
-                      required
-                      type="file"
-                      label="Image"
-                      name="myFile"
-                      accept=".jpeg, .png, .jpg, .gif" //set type
-                      onChange={(e) => handleFileUpload(e)}
-                    />
-                    <img
-                      style={{ height: "80px" }}
-                      className="d-inline-block text-truncate mx-2 p-2.5"
-                      src={image}
-                    />
-                  </div> */}
                   {!image && (
                     <div className="mt-2 flex justify-center items-center w-full">
                       <label
@@ -322,6 +309,7 @@ const CreateCourse = () => {
       </>
     );
   };
+  //Previews
   const Preview = () => {
     const body_length = body.slice(0, 400) + " ...";
     return (
@@ -413,6 +401,8 @@ const CreateCourse = () => {
       </>
     );
   };
+
+  //Todo lesson
   const TodoForm = ({ addTodo }) => {
     const [input, setInput] = useState("");
     const [url, setUrls] = useState("");
@@ -425,11 +415,15 @@ const CreateCourse = () => {
     };
 
     const submitHandler = () => {
-      if (input.length > 0 && url.length > 0) {
+      if (input.length !== 0 && url.length !== 0) {
         addTodo(input, url);
         setInput("");
       } else {
-        alert("Please enter your name and  Media Url.");
+        Swal(
+          "Missing information",
+          "Please enter your name and media url ",
+          "error"
+        );
       }
     };
 
@@ -450,7 +444,7 @@ const CreateCourse = () => {
           onChange={changeHandler}
           rows="1"
           className="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-          placeholder="Your message..."
+          placeholder="Your Name..."
         ></textarea>
         <div
           type="button"
@@ -488,9 +482,6 @@ const CreateCourse = () => {
         >
           ADD
         </button>
-        {/* <button type="button" class="btn btn-outline-dark">
-          ADD
-        </button> */}
       </div>
     );
   };
