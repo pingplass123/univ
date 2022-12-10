@@ -17,6 +17,9 @@ import {useNavigate} from 'react-router-dom';
 import { Button } from 'react-bootstrap'
 import { slice } from 'lodash'
 
+
+
+
 const ShowBlog = () => {
 
     const [posts,setPosts] = useState([]);
@@ -51,12 +54,8 @@ const ShowBlog = () => {
       }
     }
     
-    const initialComments = slice(comments.all_comment || [], 0, index)
-
-
-
-    // const str = (posts.hastag || ',')
-    // const arrayHashtag = typeof str === 'object' ? str : str.split(',');
+    const initialComments = slice(comments.all_comment || [], 0, index);
+    initialComments.sort((a, b) => (a.id > b.id) ? -1 : 1);
 
     ///// Sort commenst to show the newest comments on top ///////
     // initialComments.sort((a, b) => (a.id > b.id) ? -1 : 1)
@@ -83,9 +82,6 @@ const ShowBlog = () => {
     },[])
 
     // console.log(posts)
-
-
-    
 
     /////////////// Display All Comments ///////////////////////////
     const FetchComment = () => {
@@ -460,7 +456,9 @@ if(user_id==posts.userID){
       <div class='container-xl'>
         {/* Post Content */}
         <header>
-        <Button variant='danger' onClick={() => deletePost(posts.id)}>Delete Post</Button>
+        <div class="d-flex flex-row-reverse">
+          <div class="p-2"><Button variant='danger' onClick={() => deletePost(posts.id)}>Delete Post</Button></div>
+        </div>
         <br></br>
         <br></br>
         <p className='blog-date'>Published {posts.created_at}</p>
@@ -541,7 +539,7 @@ if(user_id==posts.userID){
               <div class="col">
 
                   <div class="headings d-flex justify-content-between align-items-center mb-3">
-                      <h6>All Comments({countComment})</h6>
+                      <h6>All Comments ( {countComment} )</h6>
                   </div>
                   
                 {initialComments.map((data)=>{
