@@ -187,6 +187,12 @@ const ContainnerCard = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
+}
 `
 
 const Title = styled.h1`

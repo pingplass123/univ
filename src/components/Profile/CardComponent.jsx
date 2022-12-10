@@ -17,6 +17,10 @@ const Container = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   overflow: hidden;
+  
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 const Photo = styled.div`
@@ -26,10 +30,12 @@ const Photo = styled.div`
   background-size: cover;
   width: 30%;
   height: 100%;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Content = styled.div`
-
   background-color: white;
   padding: 20px;
   width: 70%;
@@ -43,11 +49,21 @@ const Title = styled.span`
   font-size: 18px;
   font-weight: 900;
   color: ${props => props.color};
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+
 `;
 
 const Text = styled.p`
   color: #9ca1ae;
   line-height: 1.5;
+  
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+  
 `;
 
 const Tag = styled.p`
@@ -58,6 +74,10 @@ const Tag = styled.p`
 const PreTitle = styled.span`
   color: ${props => props.color};
   display: block;
+  
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 
 const CTA = styled.span`
