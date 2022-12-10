@@ -24,6 +24,11 @@
     padding-left: 2rem;
 }
 
+.header-blog{
+    padding: 50px;
+    text-align: center;
+}
+
 .subcategory{
     max-width: fit-content;
 }
