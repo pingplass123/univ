@@ -67,7 +67,7 @@ const Profile = () => {
             <br />
             <Title>{userName}</Title>
             <br />
-            <SubTitle>Your Blog</SubTitle>
+            <SubTitle>Your Post</SubTitle>
             {!post ? (
                 <div class="col-md-8 offset-md-5">
                     <div class="spinner-grow text-primary" role="status">

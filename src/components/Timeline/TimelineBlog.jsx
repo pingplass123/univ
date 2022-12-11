@@ -62,7 +62,7 @@ const TimelineBlog = () => {
                     }
                 )
                 ) : (
-                    <div className='text-center'>No Blog Found</div>
+                    <div className='text-center'>No Post Found</div>
                 )}
            
             </>)}

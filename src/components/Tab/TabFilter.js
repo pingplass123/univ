@@ -13,7 +13,7 @@ function TabFilter() {
       id="uncontrolled-tab-example"
       className="mb-3"
     >
-      <Tab eventKey="Blog" title="Blog">
+      <Tab eventKey="Blog" title="Post">
         <TimelineBlog />
       </Tab>
       <Tab eventKey="Course" title="Course">

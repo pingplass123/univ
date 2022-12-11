@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import "../Course/CourseComponents/";
 import Select from "react-select";
 import Swal from "sweetalert2";
+import swal from "sweetalert";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 // import styled from "styled-components";
@@ -419,10 +420,10 @@ const CreateCourse = () => {
         addTodo(input, url);
         setInput("");
       } else {
-        Swal(
+        swal(
           "Missing information",
           "Please enter your name and media url ",
-          "error"
+          "warning"
         );
       }
     };

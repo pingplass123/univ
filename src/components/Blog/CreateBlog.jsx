@@ -125,7 +125,7 @@ const CreateBlog = () => {
       <Form.Label><h2>Created by {name}</h2></Form.Label><br/>
       <Form.Label>{date}{' '}{time}</Form.Label><hr/>
         <Form.Group className="mb-3" controlId="formBasicTitle">
-          <Form.Label style={{color:'#37a6fb'}}>What's your blog title?</Form.Label>
+          <Form.Label style={{color:'#37a6fb'}}>What's your post title?</Form.Label>
           <Form.Control
           type="text" 
           value={title} 
@@ -145,7 +145,7 @@ const CreateBlog = () => {
           onChange={setSelected}
         />
         <br/>
-      <Form.Label style={{color:'#37a6fb'}}>Select your cover blog!</Form.Label>
+      <Form.Label style={{color:'#37a6fb'}}>Select your cover post!</Form.Label>
       <div className="mb-3 ">
         <input
           type="file"

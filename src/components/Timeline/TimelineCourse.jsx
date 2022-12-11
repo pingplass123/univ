@@ -68,6 +68,6 @@ export default TimelineCourse
 
 const InputArea = styled.input`
     border-radius: 5px;
-    width: 50%;
+    width: 30%;
 
 `

@@ -17,7 +17,7 @@ function TabCreate() {
       id="uncontrolled-tab-example"
       className="mb-3"
    >
-      <Tab eventKey="Blog" title="Blog">
+      <Tab eventKey="Blog" title="Post">
           <div  onClick={()=>navigate(-1)} style={{display:'flex',marginLeft:'1rem'}}>
             <div className='align-self-center'><BiArrowBack/></div>
             <div className='back'>&nbsp;go back</div>
