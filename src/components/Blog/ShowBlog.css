@@ -5,28 +5,11 @@
   max-width: 900px;
 }
 
-  
-  /* .blog-wrap {
-      max-width: 900px;
-      margin: 0 auto; */
-      /* font-family: 'Montserrat', sans-serif; */
-      /* margin-top: 90px;
-      
-    }  */
-    
-    /* .blog-goBack {
-      text-decoration: none;
-      font-size: 0.8rem;
-      color: #a9a9a9;
-      font-weight: 500;
-      margin-bottom: 2rem;
-      display: block;
-      margin-top: 80px;
-    } */
-    /* .header {
+
+    .header {
       text-align: left;
       font-family: 'Montserrat', sans-serif;
-    } */
+    }
   
     .blog-title {
       text-align: left;
@@ -42,11 +25,7 @@
       font-family: 'Montserrat', sans-serif;
       
     }
-/*     
-    .img {
-      width: 100%;
-      height: 100%;
-    } */
+
   
     .hastag {
       white-space: nowrap;
@@ -93,20 +72,17 @@
       align-items: center;
       margin-bottom: 1rem;
     }
-  
-  .post-img-blog {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    /* object-fit: cover; */
-  }
-    /* .author-user-img {
+    .rounded-circle {
       width: 40px;
       height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    } */
+      margin-right: 0.8rem;
+    }
   
+  .post-img-blog {
+    width:900px;
+    height: auto;
+  }
+
     .author-user-name {
       font-size: 20px;
       font-weight: 500;
@@ -161,101 +137,6 @@
     color: #fff;
     background-color: #000;
   }
-  
-/*   
-  .titile-comment {
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  
-  .all-Comment-list {
-    display: block;
-    position: relative;
-    left: 0;
-    max-width: 100%;
-    max-height: 70%;
-  
-    
-  } 
-  
-  .comment-section{
-    max-height: 50vh;
-    max-width: 100%;
-    background-color: #fff;
-    overflow-y:auto;
-    border:1px solid #ccc
-  } */
-  
-  /* Scrollbar styles */
-  /* ::-webkit-scrollbarComment {
-    width: 12px;
-    height: 12px;
-    } */
-    
-    /* ::-webkit-scrollbar-track {
-    border: 1px solid #d0d2d3;
-    border-radius: 0;
-    
-    } */
-  
-    /* ::-webkit-scrollbar-thumb {
-      background: #d0d2d3;  
-      border-radius: 0px;
-      } */
-  
-    /* ::-webkit-scrollbar-thumb:hover {
-      background: #d0d2d3;  
-      } */
-  
-  /* .cardComment {
-      
-    border: none;
-    text-align: left;
-    box-shadow: 5px 6px 6px 2px #e9ecef;
-    border-radius: 4px;
-    max-width: 900px
-  } */
-  
-  
-  /* .dots{
-  
-  height: 4px;
-  width: 4px;
-  margin-bottom: 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  }
-  
-  .badge{
-  
-    padding: 7px;
-    padding-right: 9px;
-    padding-left: 16px;
-    box-shadow: 5px 6px 6px 2px #e9ecef;
-    margin-top: 1rem;
-  } */
-  
-  
-  
-  /* .comment-date {
-    margin-left: 10px;
-    font-size: 10px;
-  }
-  
-  .user-img {
-    margin-top: 4px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-  }
-   .user-detail {
-    display: flex;
-    align-items: center;
-   } */
-  
   
   
   .rating-score {

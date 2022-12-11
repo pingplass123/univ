@@ -4,8 +4,9 @@ import Search from './Search';
 import TimelineBlog from '../Timeline/TimelineBlog';
 import TimelineCourse from '../Timeline/TimelineCourse';
 
-
 function TabFilter() {
+ 
+
   return (
     <Tabs
       defaultActiveKey="Blog"
@@ -17,9 +18,6 @@ function TabFilter() {
       </Tab>
       <Tab eventKey="Course" title="Course">
         <TimelineCourse />
-      </Tab>
-      <Tab eventKey="Search" title="Search">
-        <Search />
       </Tab>
     </Tabs>
   );

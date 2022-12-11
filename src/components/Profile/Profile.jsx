@@ -48,11 +48,6 @@ const Profile = () => {
             setReload(false)
         }
     }, [reload])
-
-    
-    
-    console.log('post', post)
-    console.log('course', course)
     return (
         <Container>
             <NavbarScroll />
